@@ -5,29 +5,26 @@
  * @format
  * @flow strict-local
  */
-
 import React, {Component} from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-} from 'react-native';
+import {Text, View} from 'react-native';
 
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+import Workout from './model/Workout';
+import * as workoutsJson from './data/workout.json';
+
+// Screens
+import WorkoutScreen from './screens/WorkoutsScreen';
 
 class WorkoutApp extends Component {
+  constructor() {
+    super();
+    this._workouts = [];
+  }
   render() {
+    // console.log(JSON.stringify(workoutsJson, null, 2));
     return (
-      <Text>Hello World</Text>
+      <View>
+        <WorkoutScreen workouts={workoutsJson.default} />
+      </View>
     );
   }
 };
