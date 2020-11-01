@@ -28,7 +28,7 @@ class WorkoutScreen extends Component {
       </ListItem>
     )
   }
-  // TODO: display the list of workouts loaded from the json
+  
   render() {
   const { workouts } = this.props
     return(

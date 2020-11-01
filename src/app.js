@@ -12,7 +12,7 @@ import Workout from './model/Workout';
 import * as workoutsJson from './data/workout.json';
 
 // Screens
-import WorkoutScreen from './screens/WorkoutsScreen';
+import WorkoutsScreen from './screens/WorkoutsScreen';
 
 class WorkoutApp extends Component {
   constructor() {
@@ -23,7 +23,7 @@ class WorkoutApp extends Component {
     // console.log(JSON.stringify(workoutsJson, null, 2));
     return (
       <View>
-        <WorkoutScreen workouts={workoutsJson.default} />
+        <WorkoutsScreen workouts={workoutsJson.default} />
       </View>
     );
   }
